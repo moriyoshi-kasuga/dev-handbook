@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/dev-handbook/',
+
   title: "Macで学ぶチームハンドブック",
   description: "基礎的な開発トールなどを解説",
   themeConfig: {
