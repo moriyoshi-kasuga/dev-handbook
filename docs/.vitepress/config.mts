@@ -14,10 +14,21 @@ export default defineConfig({
     ],
 
     outline: "deep",
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/moriyoshi-kasuga/dev-handbook' }
     ],
+    editLink: {
+      pattern:
+      "https://github.com/moriyoshi-kasuga/dev-handbook/blob/main/docs/:path",
+      text: "Edit this page on GitHub",
+    },
+    lastUpdated: {
+      text: "Updated at",
+      formatOptions: {
+        dateStyle: "medium",
+        timeStyle: "medium",
+      },
+    },
 
     sidebar: [
       {
