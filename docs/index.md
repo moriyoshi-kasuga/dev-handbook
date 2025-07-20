@@ -1,25 +1,8 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
+# 開発ハンドブック
 
-hero:
-  name: "開発ハンドブック"
-  text: "基礎的な開発ツールなどを解説"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+基礎的な開発ツールなどを解説
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
+## 主な内容
 
+- [Git](./git)
+- [GitHub](./github)
