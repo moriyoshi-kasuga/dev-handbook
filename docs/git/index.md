@@ -15,14 +15,14 @@ Gitを使うことで、変更の履歴を正確に記録し、いつでも過�
 ```mermaid
 gitGraph
   commit id: "init"
-  commit id: "main-update-1"
+  commit id: "add home page"
   branch feature/new-login
   checkout feature/new-login
   commit id: "wip: add login form"
   commit id: "feat: add login form"
   checkout main
-  merge feature/new-login id: "merge-1"
-  commit id: "main-update-2"
+  merge feature/new-login id: "Merge pull request"
+  commit id: "feat: require login"
 ```
 
 この図は、`main`ブランチから`feature/new-login`というブランチが作成され、作業が進んだ後、再び`main`ブランチに統合（マージ）される様子を表しています。
