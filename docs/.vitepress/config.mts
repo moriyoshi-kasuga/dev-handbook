@@ -1,38 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-/**
- * Utility function for editor path completion.
- *
- * Converts a relative markdown file path like "../index.md" to an absolute editor path like "/index".
- *
- * - The input must start with "../".
- * - The output will always start with "/" and not include the ".md" extension.
- *
- * Examples:
- *   r("../index.md")       // returns "/index"
- *   r("../foo/bar.md")     // returns "/foo/bar"
- *   r("../foo/")           // return "/foo/"
- *
- * @param path - The relative markdown file path (must start with "../")
- * @returns The absolute editor path (starts with "/")
- * @throws If the path does not start with "../"
- */
-function r(path: string) {
-  let withoutMdPath: string
-  if (!path.endsWith('.md')) {
-    withoutMdPath = path
-  }
-  else {
-    withoutMdPath = path.slice(0, -3)
-  }
-
-  if (!withoutMdPath.startsWith('../')) {
-    throw new Error(`Path must start with ../: ${path}`)
-  }
-  const currentPath = withoutMdPath.slice(3, withoutMdPath.length)
-  return `/${currentPath}`
-}
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/dev-handbook/',
@@ -64,21 +31,40 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '環境構築',
+        link: '/setup',
+      },
+      {
+        text: 'Python',
+        collapsed: false,
+        link: '/python/',
         items: [
-          {
-            text: 'Markdown Examples',
-            link: r('../markdown-examples.md'),
-          },
+          { text: '基礎', link: '/python/basic' },
         ],
       },
       {
         text: 'Git',
-        link: r('../git/'),
+        collapsed: false,
+        link: '/git/',
+        items: [
+          { text: 'Git', link: '/git/' },
+        ],
       },
       {
         text: 'GitHub',
-        link: r('../github/'),
+        collapsed: false,
+        link: '/github/',
+        items: [
+          { text: 'GitHub', link: '/github/' },
+        ],
+      },
+      {
+        text: 'プロジェクトの進め方',
+        collapsed: false,
+        link: '/workflow/',
+        items: [
+          { text: 'Workflow', link: '/workflow/' },
+        ],
       },
     ],
   },
