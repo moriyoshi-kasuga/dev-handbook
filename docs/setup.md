@@ -73,6 +73,9 @@ GitHubと安全に通信するために、SSHキーを設定します。
 以下のコマンドを一度実行するだけで、SSHキーが生成され、その内容（公開鍵）が自動的にクリップボードにコピーされます。
 
 ```bash
+/bin/bash -c "
+set -euo pipefail
+
 mkdir -p ~/.ssh && ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa && pbcopy < ~/.ssh/id_rsa.pub
 cat << EOF >> ~/.ssh/config
 Host github.com
@@ -82,7 +85,7 @@ Host github.com
   IdentityFile ~/.ssh/id_rsa
   TCPKeepAlive yes
   IdentitiesOnly yes
-EOF
+EOF"
 ```
 
 ### 2. GitHubへの公開鍵の登録
