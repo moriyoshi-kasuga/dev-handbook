@@ -8,7 +8,44 @@ macOS用のパッケージマネージャーであるHomebrewをインストー�
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
+### パスの設定
+
+インストール後、`brew`コマンドをターミナルで使えるようにするために、パスを設定する必要があります。
+
+インストールスクリプトの最後に表示される「**Next steps:**」の指示に従い、表示されたコマンドを実行してください。通常、以下のようなメッセージとコマンドが表示されます。
+
+```text
+Run these commands in your terminal to add Homebrew to your PATH:
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/your_username/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+::: tip
+上記のコマンドは一例です。ご自身の環境に合わせて、ターミナルに表示されたコマンドをコピー＆ペーストして実行してください。
+:::
+
+一般的な設定コマンドは以下の通りです。ご利用のシェルに合わせて実行してください。
+
+::: code-group
+
+```bash [~/.zprofile (zsh)]
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+```bash [~/.bash_profile (bash)]
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+:::
+
+設定後、ターミナルを再起動するか、新しいタブを開いて以下のコマンドを実行し、バージョン情報が表示されれば正しく設定されています。
+
+```bash
+brew --version
 ```
 
 ## Python
