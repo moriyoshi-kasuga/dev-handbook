@@ -31,7 +31,7 @@ export default withMermaid({
 
     sidebar: [
       {
-        text: '環境構築',
+        text: 'Setup',
         link: '/setup',
       },
       {
@@ -39,27 +39,20 @@ export default withMermaid({
         link: '/python',
       },
       {
-        text: 'Git',
-        collapsed: false,
-        link: '/git/',
-        items: [
-          { text: 'Git', link: '/git/' },
-        ],
-      },
-      {
-        text: 'GitHub',
-        collapsed: false,
-        link: '/github/',
-        items: [
-          { text: 'GitHub', link: '/github/' },
-        ],
-      },
-      {
-        text: 'プロジェクトの進め方',
-        collapsed: false,
+        text: 'Workflow',
         link: '/workflow/',
         items: [
-          { text: 'Workflow', link: '/workflow/' },
+          {
+            text: 'Git',
+            collapsed: false,
+            items: [
+              { text: 'ステージング', link: '/git/staging' },
+              { text: 'コミット', link: '/git/commit' },
+              { text: 'ブランチ', link: '/git/branch' },
+              { text: 'リモート', link: '/git/remote' },
+            ],
+          },
+          { text: 'GitHub', link: '/github/' },
         ],
       },
     ],
