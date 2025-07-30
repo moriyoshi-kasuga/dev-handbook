@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   base: '/dev-handbook/',
 
   title: '開発ハンドブック',
@@ -63,5 +63,11 @@ export default defineConfig({
         ],
       },
     ],
+  },
+  mermaid: {
+
+  },
+  mermaidPlugin: {
+    class: 'mermaid',
   },
 })
