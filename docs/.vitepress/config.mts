@@ -36,11 +36,7 @@ export default defineConfig({
       },
       {
         text: 'Python',
-        collapsed: false,
-        link: '/python/',
-        items: [
-          { text: '基礎', link: '/python/basic' },
-        ],
+        link: '/python',
       },
       {
         text: 'Git',
