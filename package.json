@@ -2,10 +2,14 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {},
   "devDependencies": {
+    "@antfu/eslint-config": "^5.0.0",
+    "eslint": "^9.32.0",
     "vitepress": "^1.6.3"
   }
 }

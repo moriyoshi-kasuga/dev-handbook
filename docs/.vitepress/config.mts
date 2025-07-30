@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress';
+import { defineConfig } from 'vitepress'
 
 /**
  * Utility function for editor path completion.
@@ -37,28 +37,28 @@ function r(path: string) {
 export default defineConfig({
   base: '/dev-handbook/',
 
-  title: "開発ハンドブック",
-  description: "基礎的な開発トールなどを解説",
+  title: '開発ハンドブック',
+  description: '基礎的な開発トールなどを解説',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
     ],
 
-    outline: "deep",
+    outline: 'deep',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/moriyoshi-kasuga/dev-handbook' }
+      { icon: 'github', link: 'https://github.com/moriyoshi-kasuga/dev-handbook' },
     ],
     editLink: {
       pattern:
-      "https://github.com/moriyoshi-kasuga/dev-handbook/blob/main/docs/:path",
-      text: "Edit this page on GitHub",
+      'https://github.com/moriyoshi-kasuga/dev-handbook/blob/main/docs/:path',
+      text: 'Edit this page on GitHub',
     },
     lastUpdated: {
-      text: "Updated at",
+      text: 'Updated at',
       formatOptions: {
-        dateStyle: "medium",
-        timeStyle: "medium",
+        dateStyle: 'medium',
+        timeStyle: 'medium',
       },
     },
 
@@ -70,16 +70,16 @@ export default defineConfig({
             text: 'Markdown Examples',
             link: r('../markdown-examples.md'),
           },
-        ]
-        },
+        ],
+      },
       {
         text: 'Git',
-        link: r('../git/')
+        link: r('../git/'),
       },
       {
         text: 'GitHub',
-        link: r('../github/')
-      }
+        link: r('../github/'),
+      },
     ],
-  }
+  },
 })
