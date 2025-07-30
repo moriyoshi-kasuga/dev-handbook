@@ -1,26 +1,30 @@
-import { defineConfig } from 'vitepress'
+import {defineConfig} from 'vitepress';
 
 /**
  * Utility function for editor path completion.
  *
  * Converts a relative markdown file path like "../index.md" to an absolute editor path like "/index".
  *
- * - The input must start with "../" and end with ".md".
+ * - The input must start with "../".
  * - The output will always start with "/" and not include the ".md" extension.
  *
  * Examples:
  *   r("../index.md")       // returns "/index"
  *   r("../foo/bar.md")     // returns "/foo/bar"
+ *   r("../foo/")           // return "/foo/"
  *
- * @param path - The relative markdown file path (must start with "../" and end with ".md")
+ * @param path - The relative markdown file path (must start with "../")
  * @returns The absolute editor path (starts with "/")
- * @throws If the path does not start with "../" or end with ".md"
+ * @throws If the path does not start with "../"
  */
 function r(path: string) {
+  let withoutMdPath: string
   if (!path.endsWith('.md')) {
-    throw new Error(`Path must end with .md: ${path}`)
+    withoutMdPath = path
   }
-  const withoutMdPath = path.slice(0, -3)
+  else {
+    withoutMdPath = path.slice(0, -3)
+  }
 
   if (!withoutMdPath.startsWith('../')) {
     throw new Error(`Path must start with ../: ${path}`)
@@ -39,7 +43,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     outline: "deep",
@@ -67,11 +70,15 @@ export default defineConfig({
             text: 'Markdown Examples',
             link: r('../markdown-examples.md'),
           },
-          {
-            text: 'Runtime API Examples',
-            link: r('../api-examples.md'),
-          }
         ]
+        },
+      {
+        text: 'Git',
+        link: r('../git/')
+      },
+      {
+        text: 'GitHub',
+        link: r('../github/')
       }
     ],
   }

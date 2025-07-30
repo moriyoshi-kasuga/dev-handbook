@@ -4,5 +4,5 @@
 
 ## 主な内容
 
-- [Git](./git)
-- [GitHub](./github)
+- [Git](./git/index)
+- [GitHub](./github/index)
