@@ -31,6 +31,10 @@ export default withMermaid({
 
     sidebar: [
       {
+        text: 'Terminal',
+        link: '/terminal/basics',
+      },
+      {
         text: 'Setup',
         link: '/setup',
       },
