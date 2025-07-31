@@ -49,6 +49,7 @@ export default withMermaid({
               { text: 'ステージング', link: '/git/staging' },
               { text: 'コミット', link: '/git/commit' },
               { text: 'ブランチ', link: '/git/branch' },
+              { text: 'ブランチの比較と統合', link: '/git/diff' },
               { text: 'リモート', link: '/git/remote' },
               { text: 'トラブルシューティング', link: '/git/troubleshooting' },
             ],
