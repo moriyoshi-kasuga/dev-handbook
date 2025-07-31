@@ -56,12 +56,24 @@ brew --version
 brew install python
 ```
 
+インストール後、バージョンを確認します。
+
+```bash
+python3 --version
+```
+
 ## Git
 
 ソースコードのバージョン管理ツールであるGitをインストールします。
 
 ```bash
 brew install git
+```
+
+インストール後、バージョンを確認します。
+
+```bash
+git --version
 ```
 
 ## GitのSSH接続設定
