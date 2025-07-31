@@ -59,7 +59,7 @@ git branch
 ### ブランチの削除
 
 ```bash
-# ブランチを削除（マージ済みの場合）
+# マージ済みのブランチを削除
 git branch -d feature/completed-feature
 
 # 強制削除（マージしていなくても削除）
@@ -169,30 +169,33 @@ my-work        # 具体性がない
 ### 1. 新機能開発の場合
 
 ```bash
-# 1. mainブランチに切り替え
+# 1. mainブランチに切り替え、最新の状態に更新
 git switch main
-
-# 2. 最新の状態に更新
 git pull origin main
 
-# 3. 新しいブランチを作成
+# 2. 新しいブランチを作成して切り替え
 git switch -c feature/user-profile
 
-# 4. 作業を進める
+# 3. 作業を進める
 # ファイルを編集...
 git add .
 git commit -m "feat: ユーザープロフィール画面を作成"
 
-# 5. さらに作業を続ける
+# 4. さらに作業を続ける
 # ファイルを編集...
 git add .
 git commit -m "feat: プロフィール編集機能を追加"
 
-# 6. 作業完了後、GitHubにプッシュ
+# 5. 作業完了後、GitHubにプッシュ
 git push origin feature/user-profile
 
-# 7. GitHub上でプルリクエストを作成（詳しくはGitHubセクションで説明）
-# プルリクエストは、作成したブランチをmainに統合するための申請です
+# 6. GitHub上でプルリクエストを作成
+# (レビュー、マージ後...)
+
+# 7. ローカルのmainブランチを更新し、不要になったブランチを削除
+git switch main
+git pull origin main
+git branch -d feature/user-profile
 ```
 
 ### 2. バグ修正の場合
@@ -210,6 +213,11 @@ git commit -m "fix: ログイン時のバリデーションエラーを修正"
 # 3. プッシュしてプルリクエスト作成
 git push origin fix/login-validation
 # GitHub上でプルリクエストを作成し、チームメンバーにレビューを依頼
+
+# 4. マージ後、ローカルをクリーンアップ
+git switch main
+git pull origin main
+git branch -d fix/login-validation
 ```
 
 ## よくある質問
