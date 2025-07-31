@@ -208,7 +208,7 @@ touch .gitignore
 
 ### Pythonプロジェクトの.gitignore例
 
-```gitignore
+```bash
 # Python関連
 __pycache__/
 *.py[cod]
@@ -238,7 +238,7 @@ secrets.json
 
 ### よく使うパターン
 
-```gitignore
+```bash
 # 特定のファイル
 secret.txt
 
