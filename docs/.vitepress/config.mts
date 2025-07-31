@@ -50,6 +50,7 @@ export default withMermaid({
               { text: 'コミット', link: '/git/commit' },
               { text: 'ブランチ', link: '/git/branch' },
               { text: 'リモート', link: '/git/remote' },
+              { text: 'トラブルシューティング', link: '/git/troubleshooting' },
             ],
           },
           { text: 'GitHub', link: '/github/' },
