@@ -138,20 +138,28 @@ git commit --amend --no-edit
 ### 基本的な履歴表示
 
 ```bash
-# 最新のコミット履歴を表示
+# 最新のコミット履歴を10件、1行で表示
 git log --oneline -10
 
 # 出力例：
-# abc1234 feat: ユーザー検索機能を追加
-# def5678 fix: ログインエラーを修正
+# abc1234 (HEAD -> feature/new, origin/feature/new) feat: ユーザー検索機能を追加
+# def5678 (origin/main, main) fix: ログインエラーを修正
 # ghi9012 docs: README を更新
 ```
 
 ### より詳細な履歴表示
 
 ```bash
-# 詳細な情報を表示
-git log --oneline --graph --decorate
+# ブランチの分岐やマージの様子をグラフで表示
+git log --graph --oneline --decorate --all -10
+
+# 出力例：
+# *   e1b2c3d (HEAD -> main, origin/main) Merge branch 'feature/login'
+# |\  
+# | * a1b2c3d (origin/feature/login) feat: ログイン機能のテストを追加
+# | * d4e5f6g feat: ログインフォームを作成
+# |/
+# * h7i8j9k docs: 初期ドキュメントを追加
 ```
 
 ## よくある質問
