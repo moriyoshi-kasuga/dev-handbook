@@ -39,6 +39,10 @@ export default withMermaid({
         link: '/setup',
       },
       {
+        text: 'VSCode',
+        link: '/vscode',
+      },
+      {
         text: 'Python',
         link: '/python',
       },
