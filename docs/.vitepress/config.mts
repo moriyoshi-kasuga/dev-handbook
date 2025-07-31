@@ -46,6 +46,7 @@ export default withMermaid({
             text: 'Git',
             collapsed: false,
             items: [
+              { text: 'Gitの基礎', link: '/git/basics' },
               { text: 'ステージング', link: '/git/staging' },
               { text: 'コミット', link: '/git/commit' },
               { text: 'ブランチ', link: '/git/branch' },
