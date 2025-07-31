@@ -164,4 +164,113 @@ git diff --staged
 git commit -m "変更内容の説明"
 ```
 
+## .gitignoreファイル
+
+Gitで管理したくないファイルがある場合、`.gitignore`ファイルを使って除外できます。
+
+### .gitignoreが必要な理由
+
+以下のようなファイルは、通常Gitで管理しません：
+- 個人の設定ファイル（`.vscode/settings.json`）
+- 機密情報（パスワード、APIキー）
+- 自動生成されるファイル（`__pycache__/`、`node_modules/`）
+- 一時ファイル（`.DS_Store`、`*.tmp`）
+
+### .gitignoreの作成方法
+
+プロジェクトのルートディレクトリに`.gitignore`ファイルを作成します：
+
+```bash
+# .gitignore ファイルを作成
+touch .gitignore
+```
+
+### Pythonプロジェクトの.gitignore例
+
+```gitignore
+# Python関連
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+.env
+
+# IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS関連
+.DS_Store
+Thumbs.db
+
+# ログファイル
+*.log
+
+# 設定ファイル（個人情報含む場合）
+config.local.py
+secrets.json
+```
+
+### よく使うパターン
+
+```gitignore
+# 特定のファイル
+secret.txt
+
+# 特定の拡張子
+*.log
+*.tmp
+
+# 特定のディレクトリ
+logs/
+temp/
+
+# 特定のディレクトリ内の特定ファイル
+config/*.local
+
+# 例外（!で指定したものは除外しない）
+*.log
+!important.log
+```
+
+### .gitignoreの確認
+
+```bash
+# 無視されるファイルを確認
+git status --ignored
+
+# 特定のファイルが無視されるかチェック
+git check-ignore ファイル名
+```
+
+::: warning 重要な注意点
+`.gitignore`は、**まだGitで管理されていないファイル**にのみ効果があります。すでに`git add`したファイルは、`.gitignore`に追加しても無視されません。
+
+すでに管理されているファイルを無視したい場合：
+```bash
+# Gitの管理から削除（ファイル自体は残る）
+git rm --cached ファイル名
+
+# .gitignoreに追加
+echo "ファイル名" >> .gitignore
+
+# 変更をコミット
+git add .gitignore
+git commit -m "chore: .gitignoreにファイル名を追加"
+```
+:::
+
+### GitHub提供の.gitignoreテンプレート
+
+GitHubでは、言語やフレームワーク別の`.gitignore`テンプレートを提供しています：
+- Python: https://github.com/github/gitignore/blob/main/Python.gitignore
+- Node.js: https://github.com/github/gitignore/blob/main/Node.gitignore
+- Java: https://github.com/github/gitignore/blob/main/Java.gitignore
+
+新しいリポジトリを作成する際に、適切なテンプレートを選択できます。
+
 ## VSCode
