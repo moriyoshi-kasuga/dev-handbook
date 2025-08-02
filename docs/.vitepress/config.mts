@@ -31,16 +31,16 @@ export default withMermaid({
 
     sidebar: [
       {
+        text: 'VSCode',
+        link: '/vscode',
+      },
+      {
         text: 'Terminal',
         link: '/terminal/basics',
       },
       {
         text: 'Setup',
         link: '/setup',
-      },
-      {
-        text: 'VSCode',
-        link: '/vscode',
       },
       {
         text: 'Python',
