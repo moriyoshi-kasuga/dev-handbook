@@ -36,7 +36,11 @@ VSCodeのもう一つの大きな特徴は、その豊富な拡張機能です�
 - **Code Spell Checker**: コード内のコメントや文字列のスペルミスをチェックしてくれます。
 - **zenkaku**: 全角スペースをハイライト表示して、意図しない全角スペースの混入を防ぎます。
 - **Error Lens**: エラーや警告を該当行に直接表示してくれるため、問題の発見が容易になります。
+- **EditorConfig for VS Code**: プロジェクトごとにエディタの設定を管理できるようにします。`.editorconfig`ファイルを使って、インデントや改行コードなどのスタイルを統一できます。
 
 これらの拡張機能は、検索バーから名前で検索して「Install」ボタンをクリックするだけで簡単に追加できます。
 
-参照リンク: [https://qiita.com/ta-iga/items/94ed09aa8117d6926b36](https://qiita.com/ta-iga/items/94ed09aa8117d6926b36)
+参照リンク
+
+- [https://qiita.com/ta-iga/items/94ed09aa8117d6926b36](https://qiita.com/ta-iga/items/94ed09aa8117d6926b36)
+- [https://qiita.com/libra189/items/ac34656c253b79de1381](https://qiita.com/libra189/items/ac34656c253b79de1381)
