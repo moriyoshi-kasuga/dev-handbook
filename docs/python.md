@@ -34,14 +34,14 @@ Pythonプロジェクトでは、プロジェクトごとに独立した環境�
 
 ```bash
 # プロジェクトのディレクトリで実行
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
 ### 仮想環境の有効化
 
 ```bash
 # macOSの場合
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 仮想環境が有効になると、ターミナルのプロンプトに `(venv)` が表示されます。
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ```
 
 ::: tip
-`.gitignore`ファイルに`venv/`を追加して、仮想環境自体はGitで管理しないようにしましょう。
+`.gitignore`ファイルに`.venv/`を追加して、仮想環境自体はGitで管理しないようにしましょう。
 :::
 
 ## チーム開発のコーディング規約
