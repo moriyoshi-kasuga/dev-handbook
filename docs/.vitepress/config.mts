@@ -5,7 +5,7 @@ export default withMermaid({
   base: '/dev-handbook/',
 
   title: '開発ハンドブック',
-  description: '基礎的な開発トールなどを解説',
+  description: '基礎的な開発ツールやワークフローのハンドブックです。',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
